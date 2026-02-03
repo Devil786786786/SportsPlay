@@ -2,7 +2,7 @@ Auth (Login + Protected Endpoints)
 We use PHP sessions (cookies) for both the website and the Flutter iOS/Android app.
 
 Endpoints
-POST /api/login.php
+POST /auth/login.php
 
 Request JSON:
 
@@ -14,7 +14,7 @@ JSON with user { id, email, role_id }
 
 Also sets a session cookie (e.g., PHPSESSID) which must be sent on future requests.
 
-POST /api/logout.php
+POST /auth/logout.php
 
 Destroys the session and logs the user out.
 
