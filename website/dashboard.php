@@ -18,6 +18,7 @@ if (has_role('admin') || has_role('coach')) {
 <body>
   <h1>Welcome to SportsPlay!</h1>
   <p>This is the parent dashboard. You can view your teams, enroll in new ones, and manage your profile.</p>
+  <a href="auth/logout.php">Logout</a>
 </body>
 </html>
 
