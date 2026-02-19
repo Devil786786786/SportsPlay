@@ -157,7 +157,7 @@ $random_password = bin2hex(random_bytes(32));
 $password_hash = password_hash($random_password, PASSWORD_DEFAULT);
 
 $insUser = $pdo->prepare(
-    'INSERT INTO users (email, password_hash, first_name, last_name, phone, ip_address, is_active)
+    'INSERT INTO users (email, password_hash, first_name, last_name, phone, is_active)
      VALUES (:email, :hash, :first, :last, NULL, :ip, 1)'
 );
 $insUser->execute([

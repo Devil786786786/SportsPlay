@@ -5,7 +5,7 @@ $errors = [];
 
 // Default signup role for this DB (recommended: parent)
 // If you want new signups to be "user" instead, change to 'user'.
-$defaultRoleName = 'parent';
+$defaultRoleName = 'user';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get values from form

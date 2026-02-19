@@ -59,8 +59,6 @@ CREATE TABLE `parents` (
   CONSTRAINT `fk_parents_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `parents` (`parent_id`, `user_id`, `address`, `city`, `state`, `postal_code`) VALUES
-(2,	7,	NULL,	NULL,	NULL,	NULL);
 
 DROP TABLE IF EXISTS `players`;
 CREATE TABLE `players` (
@@ -86,11 +84,6 @@ CREATE TABLE `roles` (
   UNIQUE KEY `role_name` (`role_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `roles` (`role_id`, `role_name`) VALUES
-(1,	'admin'),
-(2,	'coach'),
-(4,	'parent'),
-(3,	'user');
 
 DROP TABLE IF EXISTS `sports`;
 CREATE TABLE `sports` (
@@ -120,7 +113,8 @@ INSERT INTO `users` (`user_id`, `email`, `password_hash`, `first_name`, `last_na
 (2,	'da@gmail.com',	'$2y$10$pdW7Vg7t7THHlB4aKrdKFuU1f0GD6RHYt4t9nQNyfnFMX91McK7BO',	'MojaBaba',	NULL,	'0995555555',	'2025-12-04 23:49:17',	1),
 (4,	'djordje.vulevic123@gmail.com',	'$2y$10$wDQLwwGtBNIMfQ2s8EZ4reg/x8Z5rLkvcH6LJvOBLOS9TeFB4btoy',	'djordje',	'vulevic',	NULL,	'2026-02-02 02:10:45',	1),
 (5,	'devilw530@gmail.com',	'$2y$10$iWmiGiT1y9w3Te2hhEv2Sud3niQPpmjwCejZvflHBcpDTcj1Dzumq',	'Devil',	'Warrior',	NULL,	'2026-02-02 18:55:54',	1),
-(7,	'jozo@gmail.com',	'$2y$10$kX5UKKo6Xlj7bOSb2nM5hewlOz5OtIpd4Wy4ZP0F0e6fI6NibrVaO',	'Jozo',	NULL,	'0995555555',	'2026-02-18 04:17:38',	1);
+(7,	'jozo@gmail.com',	'$2y$10$kX5UKKo6Xlj7bOSb2nM5hewlOz5OtIpd4Wy4ZP0F0e6fI6NibrVaO',	'Jozo',	NULL,	'0995555555',	'2026-02-18 04:17:38',	1),
+(8,	'mojababa3@gmail.com',	'$2y$10$rNlkAGKNwMMCVn8L5r.5a.lp4Ghur9MdebMmGNaI3qLbXXlIBr/pq',	'MojaBaba3',	NULL,	'0995555555',	'2026-02-18 18:46:42',	1);
 
 DROP TABLE IF EXISTS `user_roles`;
 CREATE TABLE `user_roles` (
@@ -135,11 +129,5 @@ CREATE TABLE `user_roles` (
   CONSTRAINT `fk_user_roles_user` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-INSERT INTO `user_roles` (`user_role_id`, `user_id`, `role_id`) VALUES
-(1,	1,	1),
-(2,	2,	2),
-(3,	4,	2),
-(4,	5,	3),
-(7,	7,	4);
 
--- 2026-02-18 04:18:17 UTC
+-- 2026-02-18 19:04:28 UTC

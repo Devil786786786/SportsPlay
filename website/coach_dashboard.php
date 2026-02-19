@@ -27,9 +27,10 @@ require_any_role(['coach', 'admin']);
                 <span class="coach-user">
                     Hi, <?php echo htmlspecialchars($_SESSION['user_name']); ?>
                 </span>
-                <form action="logout.php" method="post" style="display:inline;">
-                    <button class="btn-login" type="submit">Logout</button>
+                <form action="auth/logout.php" method="post" style="display:inline;">
+                    <button type="submit">Logout</button>
                 </form>
+
                 <div class="menu-icon">☰</div>
             </div>
 
